@@ -2,6 +2,7 @@ import { nativeMatch } from "./search/nativeMatch.js";
 import { runTime } from "./services/runTime.js";
 
 // Search
+//наивный метод
 const string = document.querySelector(`#nativeString`);
 const subString = document.querySelector(`#nativeSubString`);
 const result = document.querySelector(`#nativeResult`);
@@ -11,4 +12,5 @@ result.addEventListener('click', () => {
   resultText.innerHTML = `ответ: ${nativeMatch(string.value, subString.value)}, время - 
   ${runTime(() => nativeMatch(string.value, subString.value))}`;
 });
+// алгоритм Кнута-Морриса-Пратта
 
